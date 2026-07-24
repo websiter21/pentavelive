@@ -287,8 +287,8 @@
                                         <div class="text-[11px] text-slate-400 font-medium mt-0.5">Students</div>
                                     </div>
                                     <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 text-center">
-                                        <div class="text-xl font-bold font-mono text-emerald-400">1</div>
-                                        <div class="text-[11px] text-slate-400 font-medium mt-0.5">Pamong</div>
+                                        <div class="text-xl font-bold font-mono text-emerald-400">∞</div>
+                                        <div class="text-[11px] text-slate-400 font-medium mt-0.5">Energy</div>
                                     </div>
                                     <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3 text-center">
                                         <div class="text-xl font-bold font-mono text-cyan-400">IPA</div>
@@ -414,25 +414,57 @@
                     </div>
                     <div class="w-px h-8 bg-slate-700 sm:hidden"></div> <!-- Mobile fallback line -->
 
-                    <!-- Sekretaris & Bendahara Row -->
+                    <!-- Sekretaris & Bendahara Columns -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl relative z-10 sm:-mt-2">
-                        <!-- Sekretaris -->
-                        <div class="glass-card rounded-2xl p-5 border border-slate-800 text-center transition-all hover:border-cyan-500/50 hover:-translate-y-1">
-                            <div class="w-14 h-14 mx-auto rounded-full bg-slate-900 border border-cyan-500/50 flex items-center justify-center mb-3">
-                                <span class="text-xl font-bold font-heading text-cyan-400">SR</span>
+                        
+                        <!-- Sekretaris Dept -->
+                        <div class="flex flex-col items-center w-full">
+                            <!-- Sekretaris 1 -->
+                            <div class="glass-card rounded-2xl p-5 border border-slate-800 text-center w-full transition-all hover:border-cyan-500/50 hover:-translate-y-1">
+                                <div class="w-14 h-14 mx-auto rounded-full bg-slate-900 border border-cyan-500/50 flex items-center justify-center mb-3">
+                                    <span class="text-xl font-bold font-heading text-cyan-400">RJ</span>
+                                </div>
+                                <span class="text-[10px] font-mono text-cyan-400 block mb-1">Sekretaris Utama</span>
+                                <h4 class="font-bold text-white text-base">Rachelia Joy Christianty</h4>
                             </div>
-                            <span class="text-[10px] font-mono text-cyan-400 block mb-1">Sekretaris Utama</span>
-                            <h4 class="font-bold text-white text-base">Rachelia Joy Christianty</h4>
+                            
+                            <!-- Internal Connector -->
+                            <div class="w-px h-6 bg-slate-700 my-1"></div>
+                            
+                            <!-- Sekretaris 2 -->
+                            <div class="glass-card rounded-2xl p-5 border border-slate-800 text-center w-full transition-all hover:border-cyan-500/50 hover:-translate-y-1">
+                                <div class="w-14 h-14 mx-auto rounded-full bg-slate-900 border border-cyan-500/50 flex items-center justify-center mb-3">
+                                    <span class="text-xl font-bold font-heading text-cyan-400">MK</span>
+                                </div>
+                                <span class="text-[10px] font-mono text-cyan-400 block mb-1">Sekretaris 2</span>
+                                <h4 class="font-bold text-white text-base">Marsya Kania Putri</h4>
+                            </div>
                         </div>
 
-                        <!-- Bendahara -->
-                        <div class="glass-card rounded-2xl p-5 border border-slate-800 text-center transition-all hover:border-emerald-500/50 hover:-translate-y-1">
-                            <div class="w-14 h-14 mx-auto rounded-full bg-slate-900 border border-emerald-500/50 flex items-center justify-center mb-3">
-                                <span class="text-xl font-bold font-heading text-emerald-400">FR</span>
+                        <!-- Bendahara Dept -->
+                        <div class="flex flex-col items-center w-full">
+                            <!-- Bendahara 1 -->
+                            <div class="glass-card rounded-2xl p-5 border border-slate-800 text-center w-full transition-all hover:border-emerald-500/50 hover:-translate-y-1">
+                                <div class="w-14 h-14 mx-auto rounded-full bg-slate-900 border border-emerald-500/50 flex items-center justify-center mb-3">
+                                    <span class="text-xl font-bold font-heading text-emerald-400">KD</span>
+                                </div>
+                                <span class="text-[10px] font-mono text-emerald-400 block mb-1">Bendahara Utama</span>
+                                <h4 class="font-bold text-white text-base">Keysya Desvita</h4>
                             </div>
-                            <span class="text-[10px] font-mono text-emerald-400 block mb-1">Bendahara Kelas</span>
-                            <h4 class="font-bold text-white text-base">Keysya Desvita</h4>
+                            
+                            <!-- Internal Connector -->
+                            <div class="w-px h-6 bg-slate-700 my-1"></div>
+
+                            <!-- Bendahara 2 -->
+                            <div class="glass-card rounded-2xl p-5 border border-slate-800 text-center w-full transition-all hover:border-emerald-500/50 hover:-translate-y-1">
+                                <div class="w-14 h-14 mx-auto rounded-full bg-slate-900 border border-emerald-500/50 flex items-center justify-center mb-3">
+                                    <span class="text-xl font-bold font-heading text-emerald-400">NM</span>
+                                </div>
+                                <span class="text-[10px] font-mono text-emerald-400 block mb-1">Bendahara 2</span>
+                                <h4 class="font-bold text-white text-base">Nasywa Maulida Firdaus</h4>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -876,46 +908,46 @@
             senin: [
                 { time: "07:00 - 07:55", subject: "Upacara Bendera (1 JP)", teacher: "Tim Lapangan", room: "Lapangan Utama" },
                 { time: "07:55 - 09:15", subject: "Fisika (2 JP)", teacher: "Aulia Afifatur, S.Pd", room: "R. 11.5" },
-                { time: "09:15 - 10:35", subject: "Bahasa Inggris Lanjut", teacher: "-", room: "Kantin/Luar Kelas" },
-                { time: "10:35 - 10:50", subject: "Istirahat I", teacher: "Dra. Hj. Sri Wahyuni", room: "Lab Fisika" },
-                { time: "10:50 - 13:10", subject: "Kimia (2 JP)", teacher: "Siti Maryam, S.Pd.", room: "R. 11.5" },
+                { time: "09:15 - 10:50", subject: "Bahasa Inggris Lanjut", teacher: "Yayah Rodiyah, S.Pd", room: "R. 11.5" },
+                { time: "09:55 - 10:10", subject: "Istirahat I", teacher: "-", room: "Kantin/Luar Kelas" },
+                { time: "10:50 - 13:10", subject: "Kimia (2 JP)", teacher: "Sri Lestari, S.Pd.", room: "R. 11.5" },
                 { time: "11:30 - 12:30", subject: "ISOMA / MBG (1 Jam)", teacher: "-", room: "Masjid/Kantin" },
                 { time: "13:10 - 14:30", subject: "Biologi (2 JP)", teacher: "Drs. Bambang K.", room: "Lab Kimia" }
             ],
             selasa: [
-                { time: "07:00 - 08:20", subject: "Bahasa Indonesia (2 JP)", teacher: "Nurul Huda, M.Si.", room: "Lab Biologi" },
-                { time: "08:20 - 09:00", subject: "Matematika Wajib (2 JP)", teacher: "Mr. John Smith", room: "R. 11.5" },
-                { time: "09:00 - 09:15", subject: "Istirahat I", teacher: "-", room: "Kantin/Luar Kelas" },
-                { time: "09:15 - 10:35", subject: "Matematika Lanjut (2 JP)", teacher: "Drs. M. Hidayat", room: "R. 11.5" },
-                { time: "10:35 - 11:55", subject: "Bahasa Inggris Lanjut (2 JP)", teacher: "Ibu Ratna, M.Pd.", room: "R. 11.5" },
-                { time: "11:55 - 12:55", subject: "ISOMA / MBG (1 Jam)", teacher: "-", room: "Masjid/Kantin" },
-                { time: "12:55 - 14:15", subject: "Seni Budaya (2 JP)", teacher: "Ibu Yulia, S.Sn.", room: "R. Seni" }
+                { time: "07:00 - 07:15", subject: "Literasi/Tadarus", teacher: "-", room: "R. 11.5" },
+                { time: "07:15 - 08:35", subject: "Bahasa Indonesia (2 JP)", teacher: "Dwi Hartini, S.Pd", room: "R. 11.5" },
+                { time: "09:15 - 09:30", subject: "Istirahat I", teacher: "-", room: "Kantin/Luar Kelas" },
+                { time: "08:35 - 10:10", subject: "Matematika (2 JP)", teacher: "Siti Sukaesih, S.Pd", room: "R. 11.5" },
+                { time: "10:10 - 11:30", subject: "Matematika Lanjut (2 JP)", teacher: "M. Resna, M.Pd.", room: "R. 11.5" },
+                { time: "11:30 - 12:30", subject: "ISOMA / MBG (1 Jam)", teacher: "-", room: "Masjid/Kantin" },
+                { time: "12:30 - 13:50", subject: "Bahasa Inggris Lanjut", teacher: "Yayah Rodiyah, S.Pd", room: "R. 11.5" },
+                { time: "13:50 - 15:10", subject: "Seni Budaya (2 JP)", teacher: "Riza Noviati, S.Pd", room: "R. 11.5" }
             ],
             rabu: [
-                { time: "07:00 - 08:20", subject: "Pendidikan Jasmani (2 JP)", teacher: "Pak Hendra, S.Pd.", room: "Gor Sekolah" },
-                { time: "08:20 - 09:00", subject: "Fisika Lanjutan (1 JP)", teacher: "Dra. Hj. Sri Wahyuni", room: "R. 11.5" },
-                { time: "09:00 - 09:15", subject: "Istirahat I", teacher: "-", room: "Kantin/Luar Kelas" },
-                { time: "09:15 - 10:35", subject: "Pendidikan Agama (2 JP)", teacher: "Ust. Fahrurrazi", room: "R. 11.5" },
-                { time: "10:35 - 11:55", subject: "Sejarah Indonesia (2 JP)", teacher: "Drs. Heru S.", room: "R. 11.5" },
-                { time: "11:55 - 12:55", subject: "ISOMA / MBG (1 Jam)", teacher: "-", room: "Masjid/Kantin" },
-                { time: "12:55 - 14:15", subject: "Prakarya / Kewirausahaan (2 JP)", teacher: "Bpk. Anton, M.M.", room: "R. 11.5" }
+                { time: "07:00 - 07:15", subject: "Literasi/Tadarus", teacher: "-", room: "R. 11.5" },
+                { time: "07:15 - 08:35", subject: "Sejarah (2 JP)", teacher: "Reni Nur, S.Pd", room: "R. 11.5" },
+                { time: "09:15 - 09:30", subject: "Istirahat I", teacher: "-", room: "Kantin/Luar Kelas" },
+                { time: "08:35 - 10:10", subject: "Kimia (2 JP)", teacher: "Sri Lestari, S.Pd", room: "R. 11.5" },
+                { time: "10:10 - 11:30", subject: "PKN (2 JP)", teacher: "Tuyahman, M.Pd.", room: "R. 11.5" },
+                { time: "11:30 - 12:30", subject: "ISOMA / MBG (1 Jam)", teacher: "-", room: "Masjid/Kantin" },
+                { time: "12:30 - 13:50", subject: "Biologi", teacher: "Heru Purwito, S.Pd", room: "R. 11.5" },
+                { time: "13:50 - 15:10", subject: "Fisika (2 JP)", teacher: "Aulia Afifatur, S.Pd", room: "R. 11.5" }
             ],
             kamis: [
-                { time: "07:00 - 08:20", subject: "Kimia Praktikum (2 JP)", teacher: "Drs. Bambang K.", room: "Lab Kimia" },
-                { time: "08:20 - 09:00", subject: "Matematika Peminatan (1 JP)", teacher: "Drs. M. Hidayat", room: "R. 11.5" },
-                { time: "09:00 - 09:15", subject: "Istirahat I", teacher: "-", room: "Kantin/Luar Kelas" },
-                { time: "09:15 - 10:35", subject: "Informatika (2 JP)", teacher: "Ahmad Rizky, S.T.", room: "Lab Komputer" },
-                { time: "10:35 - 11:55", subject: "Bahasa Inggris Lanjut (2 JP)", teacher: "Mr. John Smith", room: "R. 11.5" },
-                { time: "11:55 - 12:55", subject: "ISOMA / MBG (1 Jam)", teacher: "-", room: "Masjid/Kantin" },
-                { time: "12:55 - 14:15", subject: "Bimbingan Konseling (2 JP)", teacher: "Guru BK", room: "R. 11.5" }
+                { time: "07:00 - 07:15", subject: "Literasi/Tadarus", teacher: "-", room: "R. 11.5" },
+                { time: "07:15 - 08:35", subject: "Matematika (2 JP)", teacher: "Siti Sukaesih, S.Pd", room: "R. 11.5" },
+                { time: "09:15 - 09:30", subject: "Istirahat I", teacher: "-", room: "Kantin/Luar Kelas" },
+                { time: "08:35 - 10:10", subject: "Matematika Lanjut (2 JP)", teacher: "M. Resna, M.Pd", room: "R. 11.5" },
+                { time: "10:10 - 11:30", subject: "Bahasa Indonesia (2 JP)", teacher: "Dwi Hartini, S.Pd.", room: "R. 11.5" },
+                { time: "11:30 - 12:30", subject: "ISOMA / MBG (1 Jam)", teacher: "-", room: "Masjid/Kantin" },
+                { time: "12:30 - 13:50", subject: "PAI", teacher: "Alaudin Dzulkarnaen, S.Pd", room: "R. 11.5" },
             ],
             jumat: [
-                { time: "07:00 - 08:00", subject: "Jum'at Bersih / Literasi (2 JP)", teacher: "Pamong 11.5", room: "Area Kelas" },
-                { time: "08:00 - 09:00", subject: "Sosiologi Lintas Minat (2 JP)", teacher: "Ibu Desy, M.Pd.", room: "R. 11.5" },
-                { time: "09:00 - 09:15", subject: "Istirahat I", teacher: "-", room: "Kantin/Luar Kelas" },
-                { time: "09:15 - 10:15", subject: "Geografi Lintas Minat (2 JP)", teacher: "Bpk. Ilham, S.Pd.", room: "R. 11.5" },
-                { time: "10:15 - 10:45", subject: "ISOMA / MBG (30 Menit)", teacher: "-", room: "Masjid/Kantin" },
-                { time: "10:45 - 11:45", subject: "Pramuka / Ekskul Wajib (2 JP)", teacher: "Pembina Pramuka", room: "Lapangan" }
+                { time: "07:00 - 07:45", subject: "Kegiatan Jumat", teacher: "-", room: "R. 11.5" },
+                { time: "07:45 - 09:15", subject: "PJOK (3 JP)", teacher: "Didik Iswanto, S.Pd", room: "R. 11.5" },
+                { time: "09:15 - 09:45", subject: "Istirahat I", teacher: "-", room: "Kantin/Luar Kelas" },
+                { time: "09:45 - 11:15", subject: "Bahasa Inggris (3 JP)", teacher: "Lukmanul Hakim, S.Pd", room: "R. 11.5" },
             ]
         };
 
