@@ -502,7 +502,7 @@
                 </div>
 
                 <!-- Student Grid (36 Boxes) -->
-                <div id="member-grid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4">
+                <div id="member-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
                     <!-- Dynamic Member Cards inserted via JS -->
                 </div>
 
@@ -973,22 +973,41 @@
             data.forEach(m => {
                 const card = document.createElement('div');
                 
-                // Kondisi khusus untuk absen kosong (No. 36)
-                if (m.id === 36 || m.name === "-") {
-                    card.className = "glass-card rounded-xl p-3 border border-slate-800/40 text-center flex flex-col items-center justify-center min-h-[80px] opacity-50";
-                    card.innerHTML = `
-                        <span class="text-xs font-mono font-bold text-slate-600 mb-1">#36</span>
-                        <span class="font-medium text-slate-500 text-xs italic">Kosong</span>
-                    `;
-                } else {
-                    card.className = "glass-card rounded-xl p-3 border border-slate-800/80 text-center flex flex-col items-center justify-center min-h-[80px] cursor-pointer group transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/50";
-                    card.onclick = () => openMemberModal(m);
-
-                    card.innerHTML = `
-                        <span class="text-[10px] font-mono font-bold text-cyan-500/60 mb-1 group-hover:text-cyan-400 transition-colors">#${String(m.id).padStart(2, '0')}</span>
-                        <h4 class="font-semibold text-slate-200 text-xs sm:text-sm leading-tight line-clamp-2 group-hover:text-white transition-colors">${m.name}</h4>
-                    `;
+                let hoverBorder = "hover:border-cyan-500/50";
+                let textAccent = "text-cyan-500/60";
+                let glowColor = "group-hover:bg-cyan-500/20";
+                
+                if (m.category === 'officer') {
+                    hoverBorder = "hover:border-amber-500/50";
+                    textAccent = "text-amber-500/60";
+                    glowColor = "group-hover:bg-amber-500/20";
+                } else if (m.category === 'science') {
+                    hoverBorder = "hover:border-emerald-500/50";
+                    textAccent = "text-emerald-500/60";
+                    glowColor = "group-hover:bg-emerald-500/20";
+                } else if (m.category === 'creative') {
+                    hoverBorder = "hover:border-purple-500/50";
+                    textAccent = "text-purple-500/60";
+                    glowColor = "group-hover:bg-purple-500/20";
                 }
+
+                // Get Initials from Name
+                const initials = m.name.split(' ').map(n => n[0]).slice(0, 2).join('').toUpperCase();
+
+                card.className = `glass-card rounded-xl p-3 border border-slate-800/80 flex flex-col items-center justify-center min-h-[130px] cursor-pointer group transition-all duration-300 hover:-translate-y-1 ${hoverBorder} relative overflow-hidden`;
+                card.onclick = () => openMemberModal(m);
+
+                card.innerHTML = `
+                    <div class="absolute -right-4 -top-4 w-12 h-12 rounded-full bg-slate-800/30 blur-xl ${glowColor} transition-all"></div>
+                    <span class="absolute top-2 left-2 text-[9px] font-mono font-bold ${textAccent} transition-colors">#${String(m.id).padStart(2, '0')}</span>
+                    
+                    <div class="w-10 h-10 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform shadow-inner">
+                        <span class="text-xs font-bold font-heading text-slate-300 group-hover:text-white">${initials}</span>
+                    </div>
+                    
+                    <h4 class="font-semibold text-slate-200 text-xs text-center leading-tight line-clamp-2 group-hover:text-white transition-colors w-full px-1 mb-1.5">${m.name}</h4>
+                    <span class="text-[9px] font-mono text-slate-400 bg-slate-900/60 px-1.5 py-0.5 rounded border border-slate-800 line-clamp-1">${m.tag}</span>
+                `;
                 
                 grid.appendChild(card);
             });
@@ -1175,9 +1194,6 @@
 
         // Member Modal Functions
         function openMemberModal(m) {
-            // Hindari klik pada kartu yang kosong
-            if (m.id === 36 || m.name === "-") return;
-
             // Generate Inisial (2 huruf pertama dari nama)
             const initials = m.name.split(' ').map(n => n[0]).slice(0, 2).join('').toUpperCase();
             document.getElementById('modal-initials').innerText = initials;
